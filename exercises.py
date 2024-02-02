@@ -2,7 +2,7 @@
 # libraries existing in Python.
 
 # -------------------------------------- Exercises --------------------------------------
-# 1) Create a new Excel file and write it on a specific cell;
+# COMPLETE - 1) Create a new Excel file and write it on a specific cell;
 # 2) Read several specific cells from an existing Excel file and store them on variables;
 # 3) Read several columns and iterate through them.
 # 4) Find the index of a cell
