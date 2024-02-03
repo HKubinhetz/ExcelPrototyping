@@ -1,5 +1,6 @@
 # -------------------------------------- Exercises --------------------------------------
 # 2) Read several specific cells from an existing Excel file and store them on variables;
+# With openpyxl
 
 # Imports
 import openpyxl
@@ -35,7 +36,7 @@ name_index = get_columns("NOME/SOBRENOME")
 tech_index = get_columns("Tecnologia")
 
 # Listing a readable relation
-print("Lista de clientes")
+print("Lista de Clientes")
 
 for i in range(1, sheet_cols-1):
     current_cdie = ws.cell(row=i, column=cdie_index).value
