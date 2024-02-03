@@ -26,13 +26,22 @@ def get_columns(mystring=""):
         print(current_cell.value)
 
         if current_cell.value == mystring:
-            return current_cell.value       # Return something useful here to build a string with desired data
+            return i       # Return something useful here to build a string with desired data
 
 
-print("Colunas da planilha:\n")
-get_columns()
+# Grabbing relevant indexes
+cdie_index = get_columns("INSTALAÇÃO")
+name_index = get_columns("NOME/SOBRENOME")
+tech_index = get_columns("Tecnologia")
 
+# Listing a readable relation
+print("Lista de clientes")
 
+for i in range(1, sheet_cols-1):
+    current_cdie = ws.cell(row=i, column=cdie_index).value
+    current_name = ws.cell(row=i, column=name_index).value
+    current_tech = ws.cell(row=i, column=tech_index).value
+    print(f"{current_cdie} - {current_name}: Possui tecnologia {current_tech}.")
 
 
 
