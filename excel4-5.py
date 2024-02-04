@@ -1,5 +1,6 @@
 # -------------------------------------- Exercises --------------------------------------
 # 4) Find the index of a cell
+# 5) Select and read a cell from a given index
 # My feeling is we ought start by using pandas right away
 # Update: my feeling was right! :)
 
