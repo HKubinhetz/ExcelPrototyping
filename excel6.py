@@ -31,5 +31,4 @@ base_df = base_df.set_index('INSTALAÇÃO')  # Setting a better index (unique, r
 print(base_df["Chamado"].loc[737206])  # This is a great way of finding column and client!
 
 # TODO - Now, it is needed to find the index of this cell
-
-
+# Try that: https://saturncloud.io/blog/how-to-get-column-index-from-column-name-in-python-pandas/
