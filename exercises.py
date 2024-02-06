@@ -7,8 +7,8 @@
 # COMPLETE - 3) Read several columns and iterate through them.
 # COMPLETE - 4) Find the index of a cell
 # COMPLETE - 5) Select and read a cell from a given index
-# PARTIAL -  6) Manipulate an opened sheet (That requires some go-around)
-# 7) Learn to overwrite and append on an existing, non-empty, cell;
+# COMPLETE - 6) Manipulate an opened sheet (That requires some go-around)
+# COMPLETE - 7) Learn to overwrite and append on an existing, non-empty, cell;
 # 8) Learn to format cells (center, bold, color, fill);
 # 9) Finally, save something at an Excel Sheet and run a VBA macro from there, that then runs another py script.
 

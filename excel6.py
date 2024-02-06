@@ -4,6 +4,7 @@
 import xlwings as xw
 import pandas as pd
 import numpy as np
+from datetime import datetime
 
 wb = xw.Book("example.xlsx")  # Workbook object
 base = wb.sheets['Base']      # Worksheet object
@@ -11,7 +12,6 @@ base = wb.sheets['Base']      # Worksheet object
 
 # Printing Cells
 # print(base["C6"].value)
-
 
 # Next part = Find indexes.
 
@@ -32,18 +32,28 @@ base_df.columns = new_header  # Set the header row as the df header
 # Dataframe setup:
 base_df = base_df.astype({'INSTALAÇÃO': np.int64})  # Setting column to int
 col_index = base_df.columns.tolist().index('Chamado')
-# row_index = int(base_df.index[base_df['INSTALAÇÃO'] == 691969][0]) + 1  # Adding one to exclude header
-# print(base[row_index, col_index].value)
 
 
-def itsm_ticket():
+def writeticket():
     # TODO - Create safeties:
-    # TODO - 1) Check if there is something on that cell (if so, append);
-    # TODO - 2) Check if the line is correct with pandas! A simple if loop should do the trick
-    cdie = int(input("Por favor informe a instalação que deseja abrir um chamado: "))
-    row = int(base_df.index[base_df['INSTALAÇÃO'] == cdie][0])
-    ticket = str(input("Por favor informe o número do chamado: "))
-    base[row, col_index].value = ticket
+    # TODO - 1) Format edited Cells
+
+    cdie = 691969
+    row_index = int(base_df.index[base_df['INSTALAÇÃO'] == cdie][0])
+    todaydate = datetime.today().strftime('%d/%m')
+    data = todaydate + " - " + "TICKET00001"
+    # cdie = int(input("Por favor informe a instalação que deseja abrir um chamado: "))
+    # ticket = str(input("Por favor informe o número do chamado: "))
+
+    cell = base[row_index, col_index]
+
+    if cell.value is None:
+        cell.value = data
+
+    else:
+        cell.value = data + "\n" + cell.value
 
 
-itsm_ticket()
+writeticket()
+
+
