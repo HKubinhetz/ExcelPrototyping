@@ -8,6 +8,7 @@ from datetime import datetime
 
 wb = xw.Book("example.xlsx")  # Workbook object
 base = wb.sheets['Base']      # Worksheet object
+
 # base["N3"].value = "Teste"    # Write on a cell
 
 # Printing Cells
@@ -35,8 +36,6 @@ col_index = base_df.columns.tolist().index('Chamado')
 
 
 def writeticket():
-    # TODO - Create safeties:
-    # TODO - 1) Format edited Cells
 
     cdie = 691969
     row_index = int(base_df.index[base_df['INSTALAÇÃO'] == cdie][0])
@@ -45,7 +44,11 @@ def writeticket():
     # cdie = int(input("Por favor informe a instalação que deseja abrir um chamado: "))
     # ticket = str(input("Por favor informe o número do chamado: "))
 
+    # Cell formatting
     cell = base[row_index, col_index]
+    cell.font.bold = True
+    cell.font.color = (132, 189, 0)
+    cell.color = (235, 255, 189)
 
     if cell.value is None:
         cell.value = data
