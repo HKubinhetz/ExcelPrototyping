@@ -10,5 +10,7 @@
 # COMPLETE - 6) Manipulate an opened sheet (That requires some go-around)
 # COMPLETE - 7) Learn to overwrite and append on an existing, non-empty, cell;
 # COMPLETE - 8) Learn to format cells (center, bold, color, fill);
-# 9) Finally, save something at an Excel Sheet and run a VBA macro from there, that then runs another py script.
+# COMPLETE - 9) Save something at an Excel Sheet and run a VBA macro from there, that then runs another py script.
+
+
 
